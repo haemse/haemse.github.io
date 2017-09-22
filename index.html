@@ -19,6 +19,10 @@
       background-color: #f2f2f2;
       padding: 25px;
     }
+
+    body {
+      background-color: #101010;
+    }
   </style>
 </head>
 <body>
@@ -31,11 +35,11 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">Portfolio</a>
+      <a class="navbar-brand" href="#">CC Viewer</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
+        <li class="active"><a href="#">Stats</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Gallery</a></li>
         <li><a href="#">Contact</a></li>
@@ -49,8 +53,8 @@
 
 <div class="jumbotron">
   <div class="container text-center">
-    <h1>My Portfolio</h1>      
-    <p>Some text that represents "Me"...</p>
+    <h1>my cryptocurrency report</h1>      
+    <p>see the current data of a individual collection of cryptocurrencies</p>
   </div>
 </div>
   
@@ -62,6 +66,7 @@
         baseUrl = "https://widgets.cryptocompare.com/";
         var scripts = document.getElementsByTagName("script");
         var embedder = scripts[ scripts.length - 1 ];
+        var cccTheme = {"General":{"background":"#EEE"}};
         (function (){
         var appName = encodeURIComponent(window.location.hostname);
         if(appName==""){appName="local";}
@@ -75,16 +80,58 @@
       </script>
     </div>
     <div class="col-sm-3"> 
-      <p>Some text..</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-3"> 
-      <p>Some text..</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+      <script type="text/javascript">
+          baseUrl = "https://widgets.cryptocompare.com/";
+          var scripts = document.getElementsByTagName("script");
+          var embedder = scripts[ scripts.length - 1 ];
+          var cccTheme = {"General":{"background":"#EEE"}};
+          (function (){
+          var appName = encodeURIComponent(window.location.hostname);
+          if(appName==""){appName="local";}
+          var s = document.createElement("script");
+          s.type = "text/javascript";
+          s.async = true;
+          var theUrl = baseUrl+'serve/v1/coin/chart?fsym=ETH&tsym=EUR';
+          s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+          embedder.parentNode.appendChild(s);
+          })();
+      </script>
     </div>
     <div class="col-sm-3">
-      <p>Some text..</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+        <script type="text/javascript">
+          baseUrl = "https://widgets.cryptocompare.com/";
+          var scripts = document.getElementsByTagName("script");
+          var embedder = scripts[ scripts.length - 1 ];
+          var cccTheme = {"General":{"background":"#EEE"}};
+          (function (){
+          var appName = encodeURIComponent(window.location.hostname);
+          if(appName==""){appName="local";}
+          var s = document.createElement("script");
+          s.type = "text/javascript";
+          s.async = true;
+          var theUrl = baseUrl+'serve/v1/coin/chart?fsym=LTC&tsym=EUR';
+          s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+          embedder.parentNode.appendChild(s);
+          })();
+        </script>
+    </div>
+    <div class="col-sm-3">
+        <script type="text/javascript">
+          baseUrl = "https://widgets.cryptocompare.com/";
+          var scripts = document.getElementsByTagName("script");
+          var embedder = scripts[ scripts.length - 1 ];
+          var cccTheme = {"General":{"background":"#EEE"}};
+          (function (){
+          var appName = encodeURIComponent(window.location.hostname);
+          if(appName==""){appName="local";}
+          var s = document.createElement("script");
+          s.type = "text/javascript";
+          s.async = true;
+          var theUrl = baseUrl+'serve/v1/coin/chart?fsym=DASH&tsym=EUR';
+          s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+          embedder.parentNode.appendChild(s);
+          })();
+        </script>
     </div>
   </div>
 </div><br>
@@ -111,7 +158,7 @@
 </div><br><br>
 
 <footer class="container-fluid text-center">
-  <p>Footer Text</p>
+  <p>"Sei listig, sei schlau, sei informiert!", DJ Dinkovski</p>
 </footer>
 
 </body>
